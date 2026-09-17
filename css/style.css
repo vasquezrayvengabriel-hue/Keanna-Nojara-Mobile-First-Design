@@ -4198,3 +4198,313 @@ body {
     }
 
   }
+/* =========================================================
+   KEANNA NOJARA MOBILE-FIRST PORTFOLIO
+   CSS PART 7G
+   FINAL POLISH
+   ========================================================= */
+
+
+/* =========================================================
+   68. SMOOTH CARD ANIMATION
+   ========================================================= */
+
+.card,
+.overview-card,
+.skill-card,
+.education-card,
+.project-card,
+.quality-card,
+.timeline-card,
+.growth-card,
+.technical-card,
+.personal-card,
+.learning-item,
+.project-showcase-card,
+.approach-card,
+.contact-info-card {
+    will-change: transform;
+}
+
+
+/* =========================================================
+   69. PAGE CONTENT ANIMATION
+   ========================================================= */
+
+@keyframes fadeUp {
+
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+.page-intro-content,
+.home-dashboard,
+.about-dashboard,
+.education-timeline,
+.technical-grid,
+.projects-grid,
+.contact-grid {
+    animation: fadeUp 0.6s ease both;
+}
+
+
+/* =========================================================
+   70. PROFILE IMAGE EFFECT
+   ========================================================= */
+
+.profile-image-wrapper,
+.about-profile-image {
+    transition: var(--transition);
+}
+
+
+.profile-image-wrapper:hover,
+.about-profile-image:hover {
+    transform: scale(1.03);
+}
+
+
+/* =========================================================
+   71. BUTTON PRESS EFFECT
+   ========================================================= */
+
+.btn:active {
+    transform: translateY(1px);
+}
+
+
+/* =========================================================
+   72. MOBILE NAVIGATION IMPROVEMENT
+   ========================================================= */
+
+@media (max-width: 991px) {
+
+    .nav-menu {
+        max-height: calc(100vh - 70px);
+
+        overflow-y: auto;
+
+        overscroll-behavior: contain;
+    }
+
+
+    .nav-menu a {
+        width: 100%;
+    }
+
+}
+
+
+/* =========================================================
+   73. ACTIVE NAVIGATION INDICATOR
+   ========================================================= */
+
+.nav-menu a.active {
+    position: relative;
+}
+
+
+@media (min-width: 992px) {
+
+    .nav-menu a.active::after {
+        content: "";
+
+        position: absolute;
+
+        left: 12px;
+        right: 12px;
+        bottom: 2px;
+
+        height: 3px;
+
+        background: var(--olive);
+
+        border-radius: 10px;
+    }
+
+}
+
+
+/* =========================================================
+   74. EMPTY IMAGE FALLBACK
+   ========================================================= */
+
+.profile-image,
+.about-profile-image img {
+    background: var(--light-gray);
+}
+
+
+/* =========================================================
+   75. TEXT SELECTION
+   ========================================================= */
+
+::selection {
+    background: var(--olive-light);
+    color: var(--purple-dark);
+}
+
+
+/* =========================================================
+   76. SCROLLBAR
+   ========================================================= */
+
+::-webkit-scrollbar {
+    width: 9px;
+}
+
+
+::-webkit-scrollbar-track {
+    background: var(--cream);
+}
+
+
+::-webkit-scrollbar-thumb {
+    background: var(--purple);
+
+    border-radius: 20px;
+}
+
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--purple-dark);
+}
+
+
+/* =========================================================
+   77. MOBILE SPACING
+   ========================================================= */
+
+@media (max-width: 599px) {
+
+    .section-title {
+        font-size: 1.45rem;
+    }
+
+
+    .section-description {
+        font-size: 0.82rem;
+    }
+
+
+    .page-intro h1 {
+        font-size: 1.9rem;
+    }
+
+
+    .welcome-panel h2 {
+        font-size: 1.8rem;
+    }
+
+
+    .profile-image-wrapper {
+        width: 135px;
+        height: 135px;
+    }
+
+
+    .motto-card,
+    .about-motto-card,
+    .skills-motto-card,
+    .social-contact-card {
+        padding: 28px 18px;
+    }
+
+
+    .future-project-card {
+        padding: 28px 20px;
+    }
+
+
+    .project-showcase-card {
+        padding: 22px;
+    }
+
+}
+
+
+/* =========================================================
+   78. LANDSCAPE PHONE
+   ========================================================= */
+
+@media (max-width: 767px) and (orientation: landscape) {
+
+    .page-intro {
+        padding: 55px 0 40px;
+    }
+
+
+    .page-intro h1 {
+        font-size: 2rem;
+    }
+
+
+    .home-dashboard {
+        padding: 35px 0 50px;
+    }
+
+
+    .profile-image-wrapper {
+        width: 120px;
+        height: 120px;
+    }
+
+
+    .welcome-panel {
+        min-height: 300px;
+    }
+
+}
+
+
+/* =========================================================
+   79. PRINT VERSION
+   ========================================================= */
+
+@media print {
+
+    .header,
+    .menu-toggle,
+    .nav-menu,
+    .btn,
+    .footer-social {
+        display: none !important;
+    }
+
+
+    body {
+        background: #ffffff;
+        color: #000000;
+    }
+
+
+    section {
+        padding: 25px 0;
+    }
+
+
+    .card,
+    .profile-panel,
+    .welcome-panel,
+    .project-card,
+    .technical-card,
+    .timeline-card {
+        box-shadow: none;
+        border: 1px solid #cccccc;
+    }
+
+}
+
+
+/* =========================================================
+   80. END OF STYLE SHEET
+   ========================================================= */
